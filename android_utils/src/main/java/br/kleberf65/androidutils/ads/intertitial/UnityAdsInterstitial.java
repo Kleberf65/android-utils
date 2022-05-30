@@ -60,7 +60,8 @@ public class UnityAdsInterstitial implements AdsInterstitial {
     public void loadAds() {
         if (!UnityAds.isInitialized()) {
             UnityAds.initialize(context, adsSettings.getUnity().getGameId(), adsSettings.isDebugMode(), listener);
-        }
+        } else if (adsInterstitialListener != null)
+            adsInterstitialListener.onAdsLoaded(initialLoading);
 
     }
 
