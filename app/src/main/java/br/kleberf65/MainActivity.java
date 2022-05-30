@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void onAdsLoaded(boolean initialLoading) {
             Toast.makeText(MainActivity.this, "Loaded", Toast.LENGTH_SHORT).show();
-           interstitial.showAds();
+
+            interstitial.showAds();
         }
 
         @Override
@@ -94,14 +95,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.banner_unity:
-                bannerView.loadAds(this,unitySettings);
+                bannerView.loadAds(this, unitySettings);
                 break;
             case R.id.inter_unity:
                 loadInterstitial(unitySettings);
                 break;
 
             case R.id.banner_lovin:
-                bannerView.loadAds(this,lovinSettings);
+                bannerView.loadAds(this, lovinSettings);
                 break;
             case R.id.inter_lovin:
                 loadInterstitial(lovinSettings);
