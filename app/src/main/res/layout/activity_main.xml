@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/banner_admob"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:text="BANNER ADMOB"
+            tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/inter_admob"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="INTER ADMOB"
+            tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/banner_unity"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:text="BANNER UNITY"
+            tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/inter_unity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="INTER UNITY"
+            tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/banner_lovin"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:text="BANNER APPLOVIN"
+            tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/inter_lovin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="INTER APPLOVIN "
+            tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+    </LinearLayout>
+
+
+    <br.kleberf65.androidutils.ads.banner.AdsBannerView
+        android:id="@+id/banner_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+</LinearLayout>
