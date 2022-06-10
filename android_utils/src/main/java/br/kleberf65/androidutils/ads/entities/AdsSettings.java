@@ -11,6 +11,7 @@ public class AdsSettings {
     private Admob admob;
     private Unity unity;
     private AppLovin appLovin;
+    private Appodeal appodeal;
 
     private boolean debugMode;
 
@@ -26,6 +27,12 @@ public class AdsSettings {
     public AdsSettings(Unity unity, boolean debugMode) {
         this.adsType = AdsType.UNITY;
         this.unity = unity;
+        this.debugMode = debugMode;
+    }
+
+    public AdsSettings(Appodeal appodeal, boolean debugMode) {
+        this.adsType = AdsType.APPODEAL;
+        this.appodeal = appodeal;
         this.debugMode = debugMode;
     }
 
@@ -70,6 +77,10 @@ public class AdsSettings {
 
     public AppLovin getAppLovin() {
         return appLovin;
+    }
+
+    public Appodeal getAppodeal() {
+        return appodeal;
     }
 
     public boolean isDebugMode() {

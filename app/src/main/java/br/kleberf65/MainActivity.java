@@ -11,8 +11,8 @@ import br.kleberf65.androidutils.ads.banner.AdsBannerView;
 import br.kleberf65.androidutils.ads.entities.Admob;
 import br.kleberf65.androidutils.ads.entities.AdsSettings;
 import br.kleberf65.androidutils.ads.entities.AppLovin;
+import br.kleberf65.androidutils.ads.entities.Appodeal;
 import br.kleberf65.androidutils.ads.entities.Unity;
-import br.kleberf65.androidutils.ads.enums.AdsType;
 import br.kleberf65.androidutils.ads.intertitial.AdsInterstitial;
 import br.kleberf65.androidutils.ads.intertitial.AdsInterstitialListener;
 import br.kleberf65.androidutils.ads.intertitial.InterstitialAdsFactory;
@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private AdsBannerView bannerView;
     private AdsInterstitial interstitial;
-    private AdsSettings admobSettings, unitySettings, lovinSettings;
+    private AdsSettings admobSettings, unitySettings, lovinSettings, appodealSettings;
+
     private final AdsInterstitialListener listener = new AdsInterstitialListener() {
         @Override
         public void onAdsLoaded(boolean initialLoading) {
@@ -47,8 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
-        Admob admob = new Admob("ca-app-pub-3940256099942544/6300978111",
-                "ca-app-pub-3940256099942544/1033173712");
+        Admob admob = new Admob("ca-app-pub-3940256099942544/6300978111", "ca-app-pub-3940256099942544/1033173712");
 
         admobSettings = new AdsSettings(admob, true);
 
@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         AppLovin appLovin = new AppLovin("1da5411f90f52228", "bf9fdd6b1659c2d0");
         lovinSettings = new AdsSettings(appLovin, true);
+
+        Appodeal appodeal = new Appodeal("");
+        appodealSettings = new AdsSettings(appodeal, true);
 
         bannerView = findViewById(R.id.banner_view);
         bannerView.setAdsBannerListener(new AdsBannerView.AdsBannerListener() {
@@ -71,10 +74,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        AdsSettings allSettings = new AdsSettings(AdsType.APP_LOVIN,
-                new String[]{},
-                admob, unity, appLovin,
-                false);
     }
 
     private void loadInterstitial(AdsSettings settings) {
@@ -106,6 +105,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.inter_lovin:
                 loadInterstitial(lovinSettings);
+                break;
+
+            case R.id.banner_appodeal:
+                bannerView.loadAds(this, appodealSettings);
+                break;
+            case R.id.inter_appodeal:
+                loadInterstitial(appodealSettings);
                 break;
 
         }

@@ -15,6 +15,8 @@ public class InterstitialAdsFactory {
                 return UnityAdsInterstitial.getInstance(context, adsSettings);
             case APP_LOVIN:
                 return AppLovinAdsInterstitial.getInstance(context, adsSettings);
+            case APPODEAL:
+                return AppodealInterstitial.getInstance(context, adsSettings);
             default:
                 return new EmptyAdsInterstitial();
         }

@@ -14,6 +14,8 @@ public class BannerAdsFactory {
                 return new UnityAdsBanner(context, adsSettings, listener);
             case APP_LOVIN:
                 return new AppLovinAdsBanner(context, adsSettings, listener);
+            case APPODEAL:
+                return new AppodealAdsBanner(context, adsSettings, listener);
             default:
                 return new EmptyAdsBanner(context);
         }

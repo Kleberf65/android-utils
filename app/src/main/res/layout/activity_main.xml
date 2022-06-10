@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
     <LinearLayout
-        android:padding="8dp"
-        android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <Button
-            android:onClick="onClick"
             android:id="@+id/banner_admob"
-            android:layout_marginTop="8dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp"
-            android:textSize="12sp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
             android:text="BANNER ADMOB"
+            android:textSize="12sp"
             tools:ignore="HardcodedText,UsingOnClickInXml" />
 
         <Button
-            android:onClick="onClick"
             android:id="@+id/inter_admob"
-            android:layout_marginTop="8dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
             android:text="INTER ADMOB"
             tools:ignore="HardcodedText,UsingOnClickInXml" />
 
@@ -40,67 +40,97 @@
 
 
     <LinearLayout
-        android:padding="8dp"
-        android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <Button
-            android:onClick="onClick"
             android:id="@+id/banner_unity"
-            android:layout_marginTop="8dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp"
-            android:textSize="12sp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
             android:text="BANNER UNITY"
+            android:textSize="12sp"
             tools:ignore="HardcodedText,UsingOnClickInXml" />
 
         <Button
-            android:onClick="onClick"
             android:id="@+id/inter_unity"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="INTER UNITY"
             tools:ignore="HardcodedText,UsingOnClickInXml" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:padding="8dp"
-        android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <Button
-            android:onClick="onClick"
-            android:id="@+id/banner_lovin"
-            android:layout_marginTop="8dp"
+            android:id="@+id/banner_appodeal"
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp"
-            android:textSize="12sp"
             android:layout_height="wrap_content"
-            android:text="BANNER APPLOVIN"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="BANNER APPODEAL"
+            android:textSize="12sp"
             tools:ignore="HardcodedText,UsingOnClickInXml" />
 
         <Button
+            android:id="@+id/inter_appodeal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
             android:onClick="onClick"
+            android:text="INTER APPODEAL "
+            tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/banner_lovin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="BANNER APPLOVIN"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+        <Button
             android:id="@+id/inter_lovin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="INTER APPLOVIN "
             tools:ignore="HardcodedText,UsingOnClickInXml" />
 
     </LinearLayout>
-
 
     <br.kleberf65.androidutils.ads.banner.AdsBannerView
         android:id="@+id/banner_view"
